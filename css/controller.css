@@ -1,0 +1,312 @@
+.header {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 520px;
+  background-color: #343a40;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+}
+.header p {
+  color: white;
+}
+.header .nameContainer {
+  width: 50%;
+  float: left;
+}
+.header .loginContainer {
+  width: 50%;
+  float: right;
+}
+.header .loginContainer button {
+  float: right;
+  margin-top: 6px;
+}
+
+.controller #log_area {
+  display: none;
+}
+.controller h2 {
+  text-align: center;
+}
+.controller .xyContainer {
+  top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 80%;
+  position: relative;
+  transform: perspective(600px) rotateX(45deg);
+}
+.controller .xyContainer .xy {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.controller .xyContainer .xy .xyButton {
+  width: 33%;
+  height: 33%;
+}
+.controller .xyContainer .xy .xyButton .fas {
+  color: white;
+}
+.controller .xyContainer .xy .forwardButton {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  background-color: #0096FF;
+}
+.controller .xyContainer .xy .leftButton {
+  float: left;
+  background-color: #FFBF00;
+}
+.controller .xyContainer .xy .rightButton {
+  float: right;
+  background-color: #FFBF00;
+}
+.controller .xyContainer .xy .backButton {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 33%;
+  background-color: #0096FF;
+}
+.controller .holdButton {
+  -webkit-touch-callout: none !important;
+}
+.controller .zContainer {
+  top: -30px;
+  width: 100%;
+  padding-top: 30%;
+  position: relative;
+}
+.controller .zContainer .z {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.controller .zContainer .z .zButton {
+  width: 45%;
+}
+.controller .zContainer .z .zButton p {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.controller .zContainer .z .upButton {
+  margin-right: calc(5% - 3px);
+  margin-bottom: 10px;
+}
+.controller .zContainer .z .downButton {
+  margin-left: calc(5% - 2px);
+  margin-bottom: 10px;
+}
+.controller .gripContainer {
+  bottom: 0;
+  margin-top: 25px;
+  width: 100%;
+  padding-top: 20%;
+  position: relative;
+}
+.controller .gripContainer .grip {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.controller .gripContainer .grip .addToProgram {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.controller .gripContainer .grip .addToProgram p {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.controller .gripContainer .grip .gButton {
+  width: 45%;
+}
+.controller .gripContainer .grip .gButton p {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.controller .gripContainer .grip .gripButton {
+  margin-right: calc(5% - 3px);
+}
+.controller .gripContainer .grip .releaseButton {
+  margin-left: calc(5% - 2px);
+}
+
+.loginMessage {
+  margin-top: 50px;
+}
+
+.enlarge {
+  height: 80vh !important;
+}
+
+.program {
+  transition: height 1s;
+  background-color: rgba(20, 20, 20, 0.9);
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.program .innerDiv {
+  position: relative;
+  height: calc(80vh - 10px);
+}
+.program .innerDiv .flipped {
+  transform: rotate(180deg);
+}
+.program .innerDiv .toggle {
+  float: right;
+  transition: transform 1s;
+  height: 20px;
+}
+.program .innerDiv .toggle i {
+  color: white;
+  font-size: 35px;
+}
+.program .innerDiv #count {
+  color: white;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 29px;
+}
+.program .innerDiv #count p {
+  margin-top: -5px;
+  position: static !important;
+}
+.program .innerDiv #programControl {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 85px;
+}
+.program .innerDiv #programControl .saveProgram {
+  width: calc(50% - 5px);
+  margin-right: 5px;
+}
+.program .innerDiv #programControl .loadProgram {
+  width: calc(50% - 5px);
+}
+.program .innerDiv #programControl .startProgram {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.program .innerDiv #programContainer {
+  width: 100%;
+  display: block;
+  padding-top: 4%;
+  overflow-y: scroll;
+  height: calc(100% - 125px);
+}
+.program .innerDiv #programContainer .waypoint {
+  color: white;
+  background-color: #28a745;
+  display: block;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.program .innerDiv #programContainer .waypoint .moveTo {
+  margin-right: 10px;
+}
+.program .innerDiv #programContainer .waypoint p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.popupContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.7);
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+.popupContainer .namePopup {
+  visibility: hidden;
+  position: fixed !important;
+  padding: 10px;
+  width: 80% !important;
+  margin-top: -30%;
+  margin-left: -40%;
+  background-color: white;
+  border: 2px darkgrey solid;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+}
+.popupContainer .namePopup input {
+  margin-top: 20px;
+}
+.popupContainer .namePopup button {
+  margin-top: 10px;
+}
+.popupContainer .loadPopup {
+  visibility: hidden;
+  position: fixed !important;
+  padding: 10px;
+  width: 80% !important;
+  margin-top: -30%;
+  margin-left: -40%;
+  background-color: white;
+  border: 2px darkgrey solid;
+  border-radius: 10px;
+  top: 30%;
+  left: 50%;
+}
+.popupContainer .loadPopup .closeProgramLoad {
+  margin-top: 10px;
+}
+.popupContainer .loadPopup #programList {
+  overflow-y: scroll;
+  max-height: 312px;
+}
+.popupContainer .loadPopup #programList .programListItem {
+  margin-bottom: 10px;
+  border: 2px darkgrey solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.show {
+  visibility: visible !important;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=controller.css.map */

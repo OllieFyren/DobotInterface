@@ -1,0 +1,303 @@
+.header {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 520px;
+  background-color: #343a40;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  p {
+    color: white;
+  }
+  .nameContainer {
+    width: 50%;
+    float: left;
+  }
+  .loginContainer {
+    width: 50%;
+    float: right;
+    button {
+      float: right;
+      margin-top: 6px;
+    }
+  }
+}
+.controller {
+  #log_area {
+    display: none
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .xyContainer {
+    top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-top: 80%;
+    position: relative;
+    transform:
+            perspective(600px)
+            rotateX(45deg);
+    .xy {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      .xyButton {
+        width: 33%;
+        height: 33%;
+        .fas {
+          color: white;
+        }
+      }
+      .forwardButton {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        background-color: #0096FF;
+      }
+      .leftButton {
+        float: left;
+        background-color: #FFBF00;
+      }
+      .rightButton {
+        float: right;
+        background-color: #FFBF00;
+      }
+      .backButton {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin-top: 33%;
+        background-color: #0096FF;
+      }
+    }
+  }
+  .holdButton {
+    -webkit-touch-callout: none !important;
+  }
+  .zContainer {
+    top: -30px;
+    width: 100%;
+    padding-top: 30%;
+    position: relative;
+    .z {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      .zButton {
+        width: 45%;
+        p {
+          margin-bottom: 8px;
+          margin-top: 8px;
+        }
+      }
+      .upButton {
+        margin-right: calc(5% - 3px);
+        margin-bottom: 10px;
+      }
+      .downButton {
+        margin-left: calc(5% - 2px);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .gripContainer {
+    bottom: 0;
+    margin-top: 25px;
+    width: 100%;
+    padding-top: 20%;
+    position: relative;
+    .grip {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      .addToProgram {
+        width: 100%;
+        margin-bottom: 10px;
+        p {
+          margin-bottom: 8px;
+          margin-top: 8px;
+        }
+      }
+      .gButton {
+        width: 45%;
+        p {
+          margin-bottom: 8px;
+          margin-top: 8px;
+        }
+      }
+      .gripButton {
+        margin-right: calc(5% - 3px);
+      }
+      .releaseButton {
+        margin-left: calc(5% - 2px);
+      }
+    }
+  }
+}
+.loginMessage {
+  margin-top: 50px;
+}
+.enlarge {
+  height: 80vh !important;
+}
+.program {
+  transition: height 1s;
+  background-color: rgb(20,20,20, 0.9);
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .innerDiv {
+    position: relative;
+    height: calc(80vh - 10px);
+    .flipped {
+      transform: rotate(180deg);
+    }
+    .toggle {
+      float: right;
+      transition: transform 1s;
+      height: 20px;
+      i {
+        color: white;
+        font-size: 35px;
+      }
+    }
+    #count {
+      color: white;
+      float: left;
+      height: 20px;
+      width: 20px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 29px;
+      p {
+        margin-top: -5px;
+        position: static !important;
+      }
+    }
+    #programControl {
+      bottom: 0;
+      position: absolute;
+      margin-bottom: 5px;
+      width: 100%;
+      height: 85px;
+      .saveProgram {
+        width: calc(50% - 5px);
+        margin-right: 5px;
+      }
+      .loadProgram {
+        width: calc(50% - 5px);
+      }
+      .startProgram {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+    #programContainer {
+      width: 100%;
+      display: block;
+      padding-top: 4%;
+      overflow-y: scroll;
+      height: calc(100% - 125px);
+      .waypoint {
+        color: white;
+        background-color: #28a745;
+        display: block;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        .moveTo {
+          margin-right: 10px;
+        }
+        p {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+.popupContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60,60,60,0.7);
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  .namePopup {
+    visibility: hidden;
+    position: fixed !important;
+    padding: 10px;
+    width: 80% !important;
+    margin-top: -30%;
+    margin-left: -40%;
+    background-color: white;
+    border: 2px darkgrey solid;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    input {
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+  .loadPopup {
+    visibility: hidden;
+    position: fixed !important;
+    padding: 10px;
+    width: 80% !important;
+    margin-top: -30%;
+    margin-left: -40%;
+    background-color: white;
+    border: 2px darkgrey solid;
+    border-radius: 10px;
+    top: 30%;
+    left: 50%;
+    .closeProgramLoad {
+      margin-top: 10px;
+    }
+    #programList {
+      overflow-y: scroll;
+      max-height: 312px;
+      .programListItem {
+        margin-bottom: 10px;
+        border: 2px darkgrey solid;
+        border-radius: 3px;
+        padding: 10px;
+      }
+    }
+  }
+}
+.show {
+  visibility: visible !important;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

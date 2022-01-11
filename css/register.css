@@ -1,0 +1,17 @@
+.registerContent {
+  padding: 30px;
+}
+.registerContent .card-container {
+  text-align: center;
+  margin-top: 50px;
+}
+.registerContent .card {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+.registerContent .card .card-body .submit {
+  float: right;
+}
+
+/*# sourceMappingURL=register.css.map */

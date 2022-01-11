@@ -1,0 +1,14 @@
+.loginContent {
+  padding: 30px;
+  margin-top: 50px;
+}
+.loginContent .card-container {
+  text-align: center;
+}
+.loginContent .card {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+/*# sourceMappingURL=login.css.map */
