@@ -10,7 +10,10 @@ $(document).ready(function(){
         $program.forEach((element, index) => {
             if(element[0] === 1){
                 return document.getElementById('programContainer').innerHTML +=
-                    "<div class='waypoint'><p>Bevægelse til gemt position.</p><button class='moveTo btn btn-info' data-index='" + index + "'>Udfør</button><button class='waypointRemove btn btn-danger' data-index='" + index + "'>Fjern</button></div>";
+                    "<div class='waypoint'><p>Bevægelse til gemt position.</p>" +
+                    "<button class='moveTo btn btn-info' data-index='" + index + "'>Udfør</button>" +
+                    "<button class='waypointRemove btn btn-danger' data-index='" + index + "'>Fjern</button>" +
+                    "</div>";
             }else if(element[0] === 0 && element[1] === 0) {
                 return document.getElementById('programContainer').innerHTML +=
                     "<div class='waypoint'><p>Luk gripper</p><button class='moveTo btn btn-info' data-index='" + index + "'>Udfør</button><button class='waypointRemove btn btn-danger' data-index='" + index + "'>Fjern</button></div>";
@@ -24,7 +27,7 @@ $(document).ready(function(){
     //Function to add step to the program
     $('.add').click(async function() {
         let $temp = '';
-        function hello(){
+        function getPosition(){
             return new Promise(resolve => {
                 dobot.GetPose(function(pos) {
                     resolve($temp = [1, pos[0].toFixed(0), pos[1].toFixed(0), pos[2].toFixed(0)])
@@ -32,7 +35,7 @@ $(document).ready(function(){
             })
         }
         if($(this).hasClass('addToProgram')) {
-            await hello();
+            await getPosition();
         } else if($(this).hasClass('gripButton')) {
             $temp = [0, 0];
         } else if($(this).hasClass('releaseButton')) {
